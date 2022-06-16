@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link btn btn-sm btn-outline-success" href="<?= base_url('auth'); ?>">Masuk</a>
+          <a class="nav-link btn btn-sm btn-success text-light" href="<?= base_url('auth'); ?>">Masuk</a>
         </li>
       </ul>
     </div>

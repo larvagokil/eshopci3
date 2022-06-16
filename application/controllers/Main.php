@@ -10,7 +10,10 @@
                 'brg' => $this->barangm->ambil()->result()
             ];
 
-            $this->load->view('main.php',$data);
+            $this->load->view('templates/header',$data);
+            $this->load->view('templates/topbar',$data);
+            $this->load->view('main',$data);
+            $this->load->view('templates/footer');
         }
 
     }
