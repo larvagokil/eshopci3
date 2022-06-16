@@ -16,6 +16,30 @@
             $this->load->view('templates/footer');
         }
 
+        public function detail($id) {
+
+            // $id = $this->input->get('id');
+            
+            // cek apa bener ada datanya
+            $cek = $this->barangm->detail($id);
+            if ($cek->num_rows() < 1) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Tidak Ditemukan</div>');
+                redirect('main');
+                    exit();
+            }
+            $data = [
+                'judul' => $cek->row_array()['nm_barang'],
+                'brg' => $cek->row_array(),
+                'id' => $id
+            ];
+            
+            $this->load->view('templates/header',$data);
+            $this->load->view('templates/topbar',$data);
+            $this->load->view('detail',$data);
+            $this->load->view('templates/footer');
+
+        }
+
     }
 
 ?>
