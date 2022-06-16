@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow" style="background-color: #e3f2fd;">
   <div class="container">
 
-    <a class="navbar-brand fs-3 pr-3" href="">E-Shopindo</a>
+    <a class="navbar-brand fs-3 pr-3" href="<?= base_url() ?>">E-Shopindo</a>
     <div class="input-group ">
       <input type="text" class="form-control" placeholder="Cari barang disini !!" aria-label="Username" aria-describedby="basic-addon1">
       <div class="input-group-append">
