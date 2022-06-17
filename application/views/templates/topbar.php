@@ -3,22 +3,18 @@
   <div class="container">
 
     <a class="navbar-brand fs-3 pr-3" href="<?= base_url() ?>">E-Shopindo</a>
-    <div class="input-group ">
-      <input type="text" class="form-control" placeholder="Cari barang disini !!" aria-label="Username" aria-describedby="basic-addon1">
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">O</button>
-      </div>
       <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    </div>
-
     <div class="collapse navbar-collapse" id="navbarNav">
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Ketik di sini untuk mencari produk!" aria-label="Search" size="70">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
+      </form>
       <ul class="navbar-nav pl-3">
         <li class="nav-item ">
           <a class="nav-link" href="?m=start">Home</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link btn btn-sm btn-success text-light" href="<?= base_url('auth'); ?>">Masuk</a>
         </li>
