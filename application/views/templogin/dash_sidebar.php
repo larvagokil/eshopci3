@@ -2,7 +2,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('admin'); ?>">
         <div class="sidebar-brand-icon">
             <i class="fa fa-user-tie"></i>
         </div>
@@ -45,23 +45,27 @@
         ?>
 
         <?php foreach ($subMenu as $sm) : ?>
+            <?php if ($title == $sm['title']) : ?>
+                <li class="nav-item active">
+                <?php else : ?>
+                <li class="nav-item">
+                <?php endif; ?>
 
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url($sm['url']); ?>">
+                <a class="nav-link pb-0" href="<?= base_url($sm['url']); ?>">
                     <i class="<?= $sm['icon']; ?>"></i>
                     <span><?= $sm['title']; ?></span></a>
-            </li>
-        <?php endforeach ?>
+                </li>
+            <?php endforeach ?>
 
-        <hr class="sidebar-divider">
+            <hr class="sidebar-divider mt-3">
 
-    <?php endforeach; ?>
+        <?php endforeach; ?>
 
 
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
-    </div>
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
 
 </ul>
 <!-- End of Sidebar -->
