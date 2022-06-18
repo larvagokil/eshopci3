@@ -23,7 +23,7 @@
         </li>
         <?php }else{ ?>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">Hai, User ...
+          <a class="nav-link dropdown-toggle active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false" data-bs-toggle="tooltip" title="<?= $this->session->userdata('email')?>">Hai, <?= mb_strimwidth($this->session->userdata('email'), 0, 10, "..."); ?>
           <img class="img-profile rounded-circle" width="28px" src="<?= base_url('assets/img/barang/60e96a6ee9a86.jpg')?>">
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
