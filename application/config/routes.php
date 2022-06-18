@@ -54,3 +54,4 @@ $route['produk'] = 'main';
 $route['produk/(:num)'] = 'main/detail/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['user'] = 'main';
