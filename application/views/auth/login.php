@@ -34,6 +34,10 @@
                                 <div class="text-center">
                                     <a class="small" href="<?= base_url('auth/register') ?>">Create an Account!</a>
                                 </div>
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('main') ?>">
+                                        <-Back to Homepage!</a>
+                                </div>
                             </div>
                         </div>
                     </div>
