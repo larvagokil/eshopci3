@@ -17,19 +17,20 @@
                                 <form class="user" method="post" action="<?= base_url('auth/register') ?>">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Name" value="<?= set_value('name'); ?>">
-                                        <?= form_error('name', '<small class="text-danger pl-3', '</small>'); ?>
+                                        <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" id="email" name="email" placeholder="Email" value="<?= set_value('email'); ?>">
-                                        <?= form_error('email', '<small class="text-danger pl-3', '</small>'); ?>
+                                        <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-5">
                                             <input type="password" class="form-control form-control-user" id="password1" name="password1" placeholder="Password">
-                                            <?= form_error('password1', '<small class="text-danger pl-3', '</small>'); ?>
+                                            <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                         <div class="col-sm-6">
                                             <input type="password" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Password">
+                                            <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                                         </div>
                                 </form>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">

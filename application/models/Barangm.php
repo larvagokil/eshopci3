@@ -27,6 +27,10 @@ class Barangm extends CI_Model {
         return $this->db->affected_rows();
     }
 
+    public function detail ($id) {
+        return $this->db->get_where('barang', ['id_barang' => $id]);
+    }
+
     public function uplo($file) {
              
         if ($file) {    // buat upload filenya
