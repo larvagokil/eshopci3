@@ -13,7 +13,7 @@
       </form>
       <ul class="navbar-nav pl-3 my-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="">Home</a>
+          <a class="nav-link" href="<?= base_url('main'); ?>">Home</a>
         </li>
         <?php
           if (! $this->session->userdata('email')) {

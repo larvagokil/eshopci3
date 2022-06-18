@@ -1,5 +1,3 @@
-$this
-
 <div class="container">
 
     <!-- Outer Row -->
