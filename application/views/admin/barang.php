@@ -38,7 +38,7 @@
                                     data-hrg="<?= $br['hrg_barang'] ?>"
                                     data-jml="<?= $br['jml_barang'] ?>"
                                     >Ubah</a>
-                                <a href="" class="btn btn-danger btn-sm">Hapus</a>
+                                <a href="hapus_brg/<?= $br['id_barang'] ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?');">Hapus</a>
                             </td>
                         </tr>
                         <?php endforeach; ?>

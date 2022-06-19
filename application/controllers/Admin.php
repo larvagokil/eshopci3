@@ -133,4 +133,15 @@ class Admin extends CI_Controller
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil diubah</div>');
                 redirect('admin/barang');
     }
+
+    public function hapus_brg($id) {
+        // $id = $this->input->get('id');
+        $cek = $this->barangm->hapus($id);
+        if ($cek < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Dihapus</div>');
+            redirect('admin/barang');
+        } 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil dihapus</div>');
+            redirect('admin/barang');
+    }
 }
