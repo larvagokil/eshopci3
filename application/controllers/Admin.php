@@ -115,7 +115,7 @@ class Admin extends CI_Controller
             $gbr = $gbrlama;
         }else {
             // buat upload filenya
-            $gbr = $this->barangm->uplo($_FILES['userfile']['name']);;
+            $gbr = $this->barangm->uplo($_FILES['userfile']['name']);
         }
         $data = [
             'nm_barang' => $this->input->post('nm'),
@@ -142,6 +142,25 @@ class Admin extends CI_Controller
             redirect('admin/barang');
         } 
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil dihapus</div>');
+            redirect('admin/barang');
+    }
+
+    public function tambah_brg()
+    {
+        $gbr = $this->barangm->uplo($_FILES['userfile']['name']);
+        $data = [
+            'nm_barang' => $this->input->post('nm'),
+            'gbr_barang' => $gbr,
+            'dkr_barang' => $this->input->post('dkr'),
+            'hrg_barang' => $this->input->post('hrg'),
+            'jml_barang' => $this->input->post('jml'),
+        ];
+
+        if ($this->barangm->buat($data) < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Ditambah</div>');
+            redirect('admin/barang');
+        } 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil ditambah</div>');
             redirect('admin/barang');
     }
 }
