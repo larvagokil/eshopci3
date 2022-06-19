@@ -34,18 +34,16 @@ class Barangm extends CI_Model {
     public function uplo($file) {
              
         if ($file) {    // buat upload filenya
-            $config['upload_path']          = './assets/img/';
+            $config['upload_path']          = './assets/img/barang/';
             $config['allowed_types']        = 'gif|jpg|png';
             $config['max_size']             = 3000;
-            $config['max_width']            = 4000;
-            $config['max_height']           = 4000;
-            $config['file_name']            = 'brg'. + uniqid();
+            $config['file_name']            = uniqid();
 
             $this->load->library('upload', $config);
 
             if(! $this->upload->do_upload('userfile')){
                 $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, gambar tidak bisa diupload karena tidak sesuai dengan ketentuan</div>');
-                    redirect('admin');
+                    redirect('admin/barang');
             }
             return $this->upload->data('file_name');
             }

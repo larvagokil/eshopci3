@@ -68,6 +68,25 @@
         }
     }
 </script>
+<!-- script kirim data via modal -->
+<script>
+    $(document).ready(function(){
+
+        $('#edit-barg').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            // var id = button.data('id') // Extract info from data-* attributes
+            // var db = button.data('db')
+            var modal = $(this)
+            modal.find('#id').val(button.data('id'))
+            modal.find('#nm').val(button.data('nm'))
+            modal.find('#gbr').val(button.data('gbr'))
+            var dkr = modal.find('#dkr').val(button.data('dkr'))
+            modal.find('#hrg').val(button.data('hrg'))
+            modal.find('#jml').val(button.data('jml'))
+            CKEDITOR.instances['dkr'].setData(dkr);
+        })
+});
+</script>
 </body>
 
 </html>
