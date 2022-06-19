@@ -48,6 +48,21 @@
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
+<script>
+    function previewImg() {
+        const image = document.querySelector('#image');
+        const imageLabel = document.querySelector('.form-control');
+        const imgPreview = document.querySelector('.img-thumbnail');
+
+        imageLabel.textContent = image.files[0].name;
+        const fileImage = new FileReader();
+        fileImage.readAsDataURL(image.files[0]);
+
+        fileImage.onload = function(e) {
+            imgPreview.src = e.target.result;
+        }
+    }
+</script>
 </body>
 
 </html>
