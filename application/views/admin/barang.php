@@ -8,7 +8,7 @@
         
         <div class="row-lg">
             <div class="col">
-                <table class="table">
+                <table class="table" id="dataTable">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
