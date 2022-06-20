@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Logo Website -->
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/img/profile/logoweb.png'); ?>">
 
     <title><?= $title; ?></title>
 
@@ -17,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url(); ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <script src="<?= base_url() ?>assets/vendor/ckeditor/ckeditor.js"></script>
 </head>
 
 <body id="page-top">
