@@ -105,4 +105,62 @@ class Admin extends CI_Controller
         $this->load->view('admin/transaksi', $data);
         $this->load->view('templogin/dash_footer');
     }
+
+    public function edit_brg()
+    {               
+        $id = $this->input->post('id');
+        $gbrlama = $this->input->post('gbr');
+
+        if (! $_FILES['userfile']['name']) {
+            $gbr = $gbrlama;
+        }else {
+            // buat upload filenya
+            $gbr = $this->barangm->uplo($_FILES['userfile']['name']);
+        }
+        $data = [
+            'nm_barang' => $this->input->post('nm'),
+            'dkr_barang' => $this->input->post('dkr'),
+            'hrg_barang' => $this->input->post('hrg'),
+            'jml_barang' => $this->input->post('jml'),
+            'gbr_barang' => $gbr
+        ];
+
+        $kue = $this->barangm->ubah($id, $data);
+            if ($kue < 1) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Diubah</div>');
+                redirect('admin/barang');
+            } 
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil diubah</div>');
+                redirect('admin/barang');
+    }
+
+    public function hapus_brg($id) {
+        // $id = $this->input->get('id');
+        $cek = $this->barangm->hapus($id);
+        if ($cek < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Dihapus</div>');
+            redirect('admin/barang');
+        } 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil dihapus</div>');
+            redirect('admin/barang');
+    }
+
+    public function tambah_brg()
+    {
+        $gbr = $this->barangm->uplo($_FILES['userfile']['name']);
+        $data = [
+            'nm_barang' => $this->input->post('nm'),
+            'gbr_barang' => $gbr,
+            'dkr_barang' => $this->input->post('dkr'),
+            'hrg_barang' => $this->input->post('hrg'),
+            'jml_barang' => $this->input->post('jml'),
+        ];
+
+        if ($this->barangm->buat($data) < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Ditambah</div>');
+            redirect('admin/barang');
+        } 
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil ditambah</div>');
+            redirect('admin/barang');
+    }
 }
