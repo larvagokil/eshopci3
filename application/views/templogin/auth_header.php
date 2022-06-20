@@ -8,6 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Logo Website -->
+    <link rel="apple-touch-icon" href="<?= base_url('assets/img/profile/logoweb-bg.png'); ?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/img/profile/logoweb-bg.png'); ?>">
 
     <title><?= $title; ?></title>
 
