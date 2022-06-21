@@ -40,6 +40,19 @@
 
         }
 
+        public function about() {
+
+            $data = [
+                'judul' => 'about',
+                'brg' => $this->barangm->ambil()->result()
+            ];
+
+            $this->load->view('templates/header',$data);
+            $this->load->view('templates/topbar',$data);
+            $this->load->view('about',$data);
+            $this->load->view('templates/footer');
+        }
+
     }
 
 ?>
