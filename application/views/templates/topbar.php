@@ -24,11 +24,15 @@
         <?php } else { ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false" data-bs-toggle="tooltip" title="<?= $this->session->userdata('email') ?>">Hai, <?= mb_strimwidth($this->session->userdata('email'), 0, 10, "..."); ?>
-              <img class="img-profile rounded-circle" width="28px" src="<?= base_url('assets/img/profile/default.svg') ?>">
+              <img class="img-profile rounded-circle" width="28px" src="<?= base_url('assets/img/profile/' . $this->session->userdata('img')) ?>">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil</a>
+              <?php if ($this->session->userdata('role_id') == 2) {?>
               <a class="dropdown-item" href="#">Transaksi</a>
+              <?php }else{?>
+              <a class="dropdown-item" href="<?= base_url('admin') ?>">Halaman Admin</a>
+              <?php }?>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
             </div>
