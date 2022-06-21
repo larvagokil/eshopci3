@@ -27,8 +27,8 @@
               <img class="img-profile rounded-circle" width="28px" src="<?= base_url('assets/img/profile/' . $this->session->userdata('img')) ?>">
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil</a>
               <?php if ($this->session->userdata('role_id') == 2) { ?>
+                <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil</a>
                 <a class="dropdown-item" href="#">Transaksi</a>
               <?php } else { ?>
                 <a class="dropdown-item" href="<?= base_url('admin') ?>">Halaman Admin</a>
