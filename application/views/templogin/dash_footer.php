@@ -19,6 +19,24 @@
     <i class="fas fa-angle-up"></i>
 </a>
 
+<!-- Homepage Modal-->
+<div class="modal fade" id="homeModal" tabindex="-1" role="dialog" aria-labelledby="homeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Homepage?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Homepage" if you are ready to Homepage.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="<?= base_url('user'); ?>">Homepage</a>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -70,9 +88,9 @@
 </script>
 <!-- script kirim data via modal -->
 <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
 
-        $('#edit-barg').on('show.bs.modal', function (event) {
+        $('#edit-barg').on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
             // var id = button.data('id') // Extract info from data-* attributes
             // var db = button.data('db')
@@ -85,7 +103,7 @@
             modal.find('#jml').val(button.data('jml'))
             CKEDITOR.instances['dkr'].setData(dkr);
         })
-});
+    });
 </script>
 </body>
 
