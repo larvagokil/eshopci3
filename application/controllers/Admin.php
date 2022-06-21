@@ -13,7 +13,7 @@ class Admin extends CI_Controller
     {
         $data['title'] = 'User Management';
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['org'] = $this->db->get('users')->result_array();
+        $data['org'] = $this->db->get_where('users',['role_id' => 2])->result_array();
 
         $this->load->view('templogin/dash_header', $data);
         $this->load->view('templogin/dash_sidebar', $data);

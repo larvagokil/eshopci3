@@ -14,6 +14,7 @@
                             <th scope="col">No</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Dibuat pada</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
@@ -24,6 +25,7 @@
                                 <th scope="row"><?= $i++; ?></th>
                                 <td><?= $o['name']; ?></td>
                                 <td><?= $o['email']; ?></td>
+                                <td><?= date('d F Y | h:m A', $user['date_created']); ?></td>
                                 <td>
                                     <form action="<?= base_url('/admin/HapusDataUser'); ?>/<?= $o['id']; ?>" method="post" class="d-inline">
                                         <input type="hidden" name="id" value="Hapus">
