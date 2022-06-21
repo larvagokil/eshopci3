@@ -12,8 +12,8 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = 'User Management';
-        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['org'] = $this->db->get_where('users',['role_id' => 2])->result_array();
+        $data['user'] = $this->adminm->dataAdmin();
+        $data['org'] = $this->adminm->dataUser();
 
         $this->load->view('templogin/dash_header', $data);
         $this->load->view('templogin/dash_sidebar', $data);
@@ -25,8 +25,8 @@ class Admin extends CI_Controller
     public function barang()
     {
         $data['title'] = 'Data Barang';
-        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['barg'] = $this->db->get('barang')->result_array();
+        $data['user'] = $this->adminm->dataAdmin();
+        $data['barg'] = $this->barangm->ambil()->result_array();
 
         $this->load->view('templogin/dash_header', $data);
         $this->load->view('templogin/dash_sidebar', $data);
@@ -38,7 +38,7 @@ class Admin extends CI_Controller
     public function profile()
     {
         $data['title'] = 'My Profile';
-        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->adminm->dataAdmin();
 
         $this->load->view('templogin/dash_header', $data);
         $this->load->view('templogin/dash_sidebar', $data);
@@ -50,7 +50,7 @@ class Admin extends CI_Controller
     public function edit()
     {
         $data['title'] = 'Edit Profile';
-        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->adminm->dataAdmin();
 
 
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
@@ -96,8 +96,8 @@ class Admin extends CI_Controller
     public function transaksi()
     {
         $data['title'] = 'Data Transaksi';
-        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-        $data['trans'] = $this->db->get('transaksi')->result_array();
+        $data['user'] = $this->adminm->dataAdmin();
+        $data['trans'] = $this->adminm->trans()->result_array();
 
         $this->load->view('templogin/dash_header', $data);
         $this->load->view('templogin/dash_sidebar', $data);
@@ -107,13 +107,13 @@ class Admin extends CI_Controller
     }
 
     public function edit_brg()
-    {               
+    {
         $id = $this->input->post('id');
         $gbrlama = $this->input->post('gbr');
 
-        if (! $_FILES['userfile']['name']) {
+        if (!$_FILES['userfile']['name']) {
             $gbr = $gbrlama;
-        }else {
+        } else {
             // buat upload filenya
             $gbr = $this->barangm->uplo($_FILES['userfile']['name']);
         }
@@ -126,23 +126,24 @@ class Admin extends CI_Controller
         ];
 
         $kue = $this->barangm->ubah($id, $data);
-            if ($kue < 1) {
-                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Diubah</div>');
-                redirect('admin/barang');
-            } 
-            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil diubah</div>');
-                redirect('admin/barang');
+        if ($kue < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Diubah</div>');
+            redirect('admin/barang');
+        }
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil diubah</div>');
+        redirect('admin/barang');
     }
 
-    public function hapus_brg($id) {
+    public function hapus_brg($id)
+    {
         // $id = $this->input->get('id');
         $cek = $this->barangm->hapus($id);
         if ($cek < 1) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Dihapus</div>');
             redirect('admin/barang');
-        } 
+        }
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil dihapus</div>');
-            redirect('admin/barang');
+        redirect('admin/barang');
     }
 
     public function tambah_brg()
@@ -159,8 +160,8 @@ class Admin extends CI_Controller
         if ($this->barangm->buat($data) < 1) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Ditambah</div>');
             redirect('admin/barang');
-        } 
+        }
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil ditambah</div>');
-            redirect('admin/barang');
+        redirect('admin/barang');
     }
 }
