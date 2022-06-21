@@ -2,11 +2,14 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow" style="background-color: #e3f2fd;">
   <div class="container  my-2">
 
-    <a class="navbar-brand text-success logo h1 align-self-center" href="<?= base_url() ?>">E-Shopindo</a>
+
     <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
+      <a class="navbar-brand" href="<?= base_url() ?>">
+        <img height="85" width="auto" src="<?= base_url('assets/img/profile/logoweb-gif.gif'); ?>">
+      </a>
       <form class="form-inline my-2 my-lg-0 ml-auto">
         <input class="form-control mr-sm-2" type="search" placeholder="Ketik di sini untuk mencari produk!" aria-label="Search" size="70">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
