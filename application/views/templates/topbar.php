@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow" style="background-color: #e3f2fd;">
   <div class="container  my-2">
 
-    <a class="navbar-brand fs-3 pr-3" href="<?= base_url() ?>">E-Shopindo</a>
+    <a class="navbar-brand text-success logo h1 align-self-center" href="<?= base_url() ?>">E-Shopindo</a>
     <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,7 +13,7 @@
       </form>
       <ul class="navbar-nav pl-3 my-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="<?= base_url('main'); ?>">Home</a>
+          <a class="nav-link" href="<?= base_url('main/about'); ?>">About</a>
         </li>
         <?php
         if (!$this->session->userdata('email')) {
@@ -28,11 +28,11 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil</a>
-              <?php if ($this->session->userdata('role_id') == 2) {?>
-              <a class="dropdown-item" href="#">Transaksi</a>
-              <?php }else{?>
-              <a class="dropdown-item" href="<?= base_url('admin') ?>">Halaman Admin</a>
-              <?php }?>
+              <?php if ($this->session->userdata('role_id') == 2) { ?>
+                <a class="dropdown-item" href="#">Transaksi</a>
+              <?php } else { ?>
+                <a class="dropdown-item" href="<?= base_url('admin') ?>">Halaman Admin</a>
+              <?php } ?>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
             </div>
