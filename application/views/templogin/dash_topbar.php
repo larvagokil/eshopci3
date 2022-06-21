@@ -75,7 +75,7 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="<?= base_url('user'); ?>" data-toggle="modal" data-target="#homeModal">
+                        <a class="dropdown-item" href="<?= base_url('main'); ?>" data-toggle="modal" data-target="#homeModal">
                             <i class="fas fa-door-open fa-sm fa-fw mr-2 text-gray-400"></i>
                             Homepage
                         </a>

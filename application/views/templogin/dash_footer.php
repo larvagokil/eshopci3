@@ -32,7 +32,7 @@
             <div class="modal-body">Select "Homepage" if you are ready to Homepage.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="<?= base_url('user'); ?>">Homepage</a>
+                <a class="btn btn-primary" href="<?= base_url('main'); ?>">Homepage</a>
             </div>
         </div>
     </div>
