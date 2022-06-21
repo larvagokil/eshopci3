@@ -31,14 +31,16 @@ class Adminm extends CI_Model
             $config['allowed_types'] = 'svg|jpg|png';
             $config['max_size']     = '2048';
             $config['upload_path'] = './assets/img/profile/';
+            $config['file_name'] = 'profile-' . date('Ymdhis');
 
             $this->load->library('upload', $config);
 
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
-                $this->db->set('image', $new_image);
+                return $this->db->set('image', $new_image);
             } else {
-                echo $this->upload->display_errors();
+                $this->session->set_flashdata('message', '<div class="alert alert-danger alert-message" role="alert">'.$this->upload->display_errors().'</div>');
+                    redirect('admin/edit');
             }
         }
     }
