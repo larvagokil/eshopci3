@@ -1,6 +1,6 @@
 <!-- navbar -->
-<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow" style="background-color: #e3f2fd;">
-  <div class="container  my-2">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top shadow py-0" style="background-color: #e3f2fd;">
+  <div class="container">
 
 
     <button class="navbar-toggler mx-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
