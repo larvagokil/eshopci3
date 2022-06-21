@@ -6,8 +6,7 @@
 
     <div class="row">
         <div class="col-lg-6">
-
-
+        <?= $this->session->flashdata('message'); ?>
             <?= form_open_multipart('admin/edit'); ?>
             <div class="row mb-3">
                 <label for="name" class="col-sm-2 col-form-label">Name</label>
