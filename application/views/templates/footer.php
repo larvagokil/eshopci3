@@ -15,7 +15,7 @@
               <div class="col-md-4 col-xs-12">
                   <div class="second">
                       <h4> About</h4>
-                      <li><a href="#">About Us</a></li>
+                      <li><a href="<?= base_url('main/about') ?>">About Us</a></li>
                       <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i class="fab fa-codepen fa-2x margin"></i></a>
                       <a href="https://github.com/WebDeveloperCodeRep" target="_blank"> <i class="fab fa-github fa-2x margin"></i></a>
                       <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
