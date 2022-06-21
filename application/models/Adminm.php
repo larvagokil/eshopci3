@@ -23,6 +23,8 @@ class Adminm extends CI_Model
         $this->db->set('name', $name);
         $this->db->where('email', $email);
         $this->db->update('users', $new_image);
+
+        return $this->db->affected_rows();
     }
 
     public function upload($upload_image)
