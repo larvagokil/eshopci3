@@ -16,10 +16,9 @@
                   <div class="second">
                       <h4> About</h4>
                       <li><a href="<?= base_url('main/about') ?>">About Us</a></li>
-                      <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i class="fab fa-codepen fa-2x margin"></i></a>
-                      <a href="https://github.com/WebDeveloperCodeRep" target="_blank"> <i class="fab fa-github fa-2x margin"></i></a>
-                      <a href="https://www.linkedin.com/in/andreea-mihaela-bunget-a4248812b/" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
-                      <a href="https://www.youtube.com/channel/UCX674BUbomzBCakbb75lhfA?view_as=subscriber" target="_blank"><i class="fab fa-youtube fa-2x margin"></i></a>
+                      <a href="https://github.com/larvagokil/eshopci3" target="_blank"> <i class="fab fa-github fa-2x margin"></i></a>
+                      <a href="https://api.whatsapp.com/send?phone=6281386527793" target="_blank"> <i class="fab fa-whatsapp fa-2x margin"></i></a>
+                      <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x margin"></i></a>
                       <p>
                       <h4><em>Selamat Berbelanja!</em></h4>
                       </p>
