@@ -30,7 +30,7 @@
                   <div class="third">
                       <h4> Contact</h4>
                       <ul>
-                          <li>Muh Ryan Perdana </li>
+                          <li><a href="<?= base_url('main/contact'); ?>">Contact Us</a></li>
                           <li><i class="far fa-envelope"></i> admineshopindo@gmail.com</li>
                           <li><i class="fas fa-map-marker-alt"></i> Indonesia, ID </li>
                       </ul>
