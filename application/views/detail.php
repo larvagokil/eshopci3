@@ -18,7 +18,7 @@
             <p>Terjual : 5 | Ulasan : 5.0 (3 Ulasan)</p>
             <h3><p class="ms-2">Rp<?= number_format($brg['hrg_barang'],2,",",".");?></p></h3>
             Stok : <b><?= $brg['jml_barang'] ?></b>
-            <form action="<?= base_url('main/beli') ?>" method="post">
+            <form action="<?= base_url('user/beli') ?>" method="post">
             <div class="row g-2 mt-1">
                 <div class="col-sm-2">
                     <input type="hidden" name="id" value="<?= $brg['id_barang'] ?>">
