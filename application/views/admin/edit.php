@@ -31,6 +31,7 @@
                         <div class="col-sm-9">
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="image" name="image" onchange="previewImg()">
+                                <input type="hidden" name="imglama" value="<?= $user['image'] ?>">
                             </div>
                         </div>
                     </div>

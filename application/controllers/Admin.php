@@ -64,16 +64,29 @@ class Admin extends CI_Controller
         } else {
             $name = $this->input->post('name');
             $email = $this->input->post('email');
+            $imglama = $this->input->post('imglama');
+                
             //cek jika ada gambar yang akan diupload
             $upload_image = $_FILES['image']['name'];
             if ($upload_image) {
                 $new_image = $this->adminm->upload($_FILES['image']['name']);
+            }else {
+                $new_image = $imglama;
             }
-            $que = $this->adminm->edit($name, $email, $new_image);
-            if ($que < 1) {
+
+            $ardata = [
+                'name' => $name,
+                'image' => $new_image
+            ];
+            $que = $this->adminm->edit($email, $ardata);
+            if ($que > 0) {
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                 Your Profile has been Updated</div>');
                 redirect('admin/profile');
+            }else{
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
+                Profile anda gagal di update</div>');
+                redirect('admin/edit');
             }
         }
     }

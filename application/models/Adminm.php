@@ -18,11 +18,10 @@ class Adminm extends CI_Model
         return $this->db->get('transaksi');
     }
 
-    public function edit($name, $email, $new_image)
+    public function edit($email, $data)
     {
-        $this->db->set('name', $name);
         $this->db->where('email', $email);
-        $this->db->update('users', $new_image);
+        $this->db->update('users', $data);
 
         return $this->db->affected_rows();
     }
@@ -39,7 +38,7 @@ class Adminm extends CI_Model
 
             if ($this->upload->do_upload('image')) {
                 $new_image = $this->upload->data('file_name');
-                return $this->db->set('image', $new_image);
+                return $new_image;
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger alert-message" role="alert">'.$this->upload->display_errors().'</div>');
                     redirect('admin/edit');
