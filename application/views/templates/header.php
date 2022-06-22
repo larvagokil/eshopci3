@@ -214,5 +214,6 @@
 
   <title><?= $judul ?>!</title>
 </head>
+<!-- ganti bg web disini -->
 
-<body>
+<body background="<?= base_url('assets/img/bgweb2.jpg'); ?>">
