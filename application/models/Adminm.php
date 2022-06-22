@@ -26,6 +26,13 @@ class Adminm extends CI_Model
         return $this->db->affected_rows();
     }
 
+    public function hapus ($id) {
+        $this->db->where('id', $id);
+        $this->db->delete('users');
+
+        return $this->db->affected_rows();
+    }
+
     public function upload($upload_image)
     {
         if ($upload_image) {

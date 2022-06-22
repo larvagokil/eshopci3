@@ -3,6 +3,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+    <?= $this->session->flashdata('pesan'); ?>
 
     <div class="row-lg">
 
@@ -27,7 +28,7 @@
                                 <td><?= $o['email']; ?></td>
                                 <td><?= date('d F Y | h:m A', $user['date_created']); ?></td>
                                 <td>
-                                    <form action="<?= base_url('/admin/HapusDataUser'); ?>/<?= $o['id']; ?>" method="post" class="d-inline">
+                                    <form action="<?= base_url('/admin/delete_user'); ?>/<?= $o['id']; ?>" method="post" class="d-inline">
                                         <input type="hidden" name="id" value="Hapus">
                                         <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">Delete</button>
                                     </form>

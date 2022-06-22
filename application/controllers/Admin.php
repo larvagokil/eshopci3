@@ -162,4 +162,16 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil ditambah</div>');
         redirect('admin/barang');
     }
+
+    public function delete_user($id)
+    {
+         // $id = $this->input->get('id');
+         $cek = $this->adminm->hapus($id);
+         if ($cek < 1) {
+             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Gagal Dihapus</div>');
+             redirect('admin');
+         }
+         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Selamat!! Data Berhasil dihapus</div>');
+         redirect('admin');
+    }
 }
