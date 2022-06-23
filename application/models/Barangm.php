@@ -31,6 +31,12 @@ class Barangm extends CI_Model {
         return $this->db->get_where('barang', ['id_barang' => $id]);
     }
 
+    public function cari ($kata) {
+        $this->db->like('nm_barang', $kata);
+        $this->db->or_like('dkr_barang', $kata);
+        return $this->db->get('barang');
+    }
+
     public function uplo($file) {
              
         if ($file) {    // buat upload filenya
