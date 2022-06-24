@@ -26,7 +26,7 @@
                                 <th scope="row"><?= $i++; ?></th>
                                 <td><?= $o['name']; ?></td>
                                 <td><?= $o['email']; ?></td>
-                                <td><?= date('d F Y | h:m A', $o['date_created']); ?></td>
+                                <td><?= date('d F Y | h:i:s A', $o['date_created']); ?></td>
                                 <td>
                                     <form action="<?= base_url('/admin/delete_user'); ?>/<?= $o['id']; ?>" method="post" class="d-inline">
                                         <input type="hidden" name="id" value="Hapus">
