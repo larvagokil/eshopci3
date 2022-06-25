@@ -40,6 +40,27 @@
 
         }
 
+        public function cari()
+        {
+            $kata = $this->input->post('cari');
+            $hasil = $this->barangm->cari($kata);
+
+            if ($hasil->num_rows() < 1) {
+                $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Wah..., Produk dengan kata kunci tersebut Tidak Ditemukan, Coba kata kunci lain atau cek produk rekomendasi di bawah.</div>');
+                redirect(base_url());
+                    exit();
+            }
+            $data = [
+                'judul' => 'Hasil dari ' . $kata,
+                'brg' => $hasil->result()
+            ];
+
+            $this->load->view('templates/header',$data);
+            $this->load->view('templates/topbar',$data);
+            $this->load->view('main',$data);
+            $this->load->view('templates/footer');
+        }
+
         public function about() {
 
             $data = [
