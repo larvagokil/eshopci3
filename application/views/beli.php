@@ -2,7 +2,7 @@
     $ongkir = 20000;
     $totalh = ($brg['hrg_barang'] * $jml) + $ongkir ;
 ?>
-<form action="" method="post">
+<form action="<?= base_url('user/probeli')?>" method="post">
 <div class="container pt-3">
     <div class="row g-2">        
         <div class="col-md pe-5">
