@@ -4,6 +4,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
 
+    <!-- bag atas -->
     <div class="row">
                 <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
@@ -80,10 +81,12 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <table class="table">
+    </div>
+    <!-- akhir bag atas -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
@@ -97,8 +100,8 @@
                             <th scope="col">Jenis Kirim</th>
                             <th scope="col">Jenis Bayar</th>
                             <th scope="col">status</th>
-                            <th scope="col">waktu transaksi</th>
-
+                            <th scope="col" style="white-space: nowrap">waktu transaksi</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -117,15 +120,24 @@
                             <td><?= $trs['jenisbayar']; ?></td>
                             <td><?= $trs['status']; ?></td>
                             <td><?= $trs['waktu_transaksi']; ?></td>
+                            <td>
+                                <?php if ($trs['status'] == "Menunggu Konfirmasi") { ?>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/tolak' ?>" onclick="return confirm('Apakah anda yakin ingin menolak transaksi ini . ?');" class="btn btn-danger">Tolak</a>
+
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/proses' ?>" onclick="return confirm('Apakah anda ingin memproses transaksi ?');" class="btn btn-info">Proses</a>
+                                <?php
+                                } elseif ($trs['status'] == "Diproses") {
+                                ?>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/selesai' ?>" onclick="return confirm('Apakah anda ingin menyelesaikan transaksi ini ?, Pastikan Pelanggan telah menerima barang');" class="btn btn-success">Selesaikan</a>
+                                <?php } ?>
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
-</div>
-
-
 </div>
 <!-- /.container-fluid -->
 
