@@ -104,6 +104,45 @@ class Admin extends CI_Controller
         $this->load->view('templogin/dash_footer');
     }
 
+    public function protrans($id,$status)
+    {
+        // ambil data barang
+        $idb = $this->db->get_where('transaksi',['id_transaksi' => $id])->row_array()['id_barang'];
+        $jml = $this->db->get_where('transaksi',['id_transaksi' => $id])->row_array()['jml_barang'];
+
+        switch ($status) {
+            case 'tolak':
+                $ubah = $this->barangm->detail($idb)->row_array()['jml_barang'];
+                // ubah stok barang kembali
+                $ubah += $jml;
+                $data['jml_barang'] = $ubah;
+                $this->barangm->ubah($idb,$data);
+                // memberi status ditolak
+                // template update $this->db->update($tabel,$yang mau diubah, $uniqid)
+                $this->db->update('transaksi',['status' => 'Gagal'],['id_transaksi' => $id]);
+                break;
+            
+            case 'proses':
+                $this->db->update('transaksi',['status' => 'Diproses'],['id_transaksi' => $id]);
+                break;
+
+            case 'selesai':
+                $this->db->update('transaksi',['status' => 'Selesai'],['id_transaksi' => $id]);
+                break;
+            default:
+                # code...
+                break;
+        }
+        // lempar ke hal transaksi
+        if ($this->db->affected_rows() < 1) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Status Transaksi Gagal Diubah</div>');
+            redirect('admin/transaksi');
+        }else{
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Status Transaksi berhasil Diubah</div>');
+            redirect('admin/transaksi');
+        }
+    }
+
     public function edit_brg()
     {
         $id = $this->input->post('id');
