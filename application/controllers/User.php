@@ -74,4 +74,20 @@ class User extends CI_Controller
         }
 
     }
+
+    public function transaksi()
+    {        
+        if (! $this->session->userdata('email')) {   
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');         
+            redirect('main'); 
+        }
+        $data = [
+            'judul' => 'Transaksi',
+            'trx' => $this->db->get_where('transaksi',['nm_user' => $this->session->userdata('email')])->result_array(),
+        ];
+        $this->load->view('templates/header',$data);
+        $this->load->view('templates/topbar',$data);
+        $this->load->view('transaksi',$data);
+        $this->load->view('templates/footer');
+    }
 }
