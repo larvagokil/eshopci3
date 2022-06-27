@@ -1,15 +1,15 @@
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' href="path/style.css">
-
+<div id="badan">
+<div class="container py-3" >
 <form id="contact-form">
     <p>Untuk Client,</p>
     <p>Nama
         <label for="your-name">Saya</label> Adalah
-        <input type="text" name="your-name" id="your-name" minlength="3" placeholder="(Nama Anda)" required> Dan
+        <input class="input" type="text" name="your-name" id="your-name" minlength="3" placeholder="(Nama Anda)" required> Dan
     </p>
 
     <p>
         <label for="email">Email Saya</label> Adalah
-        <input type="email" name="your-email" id="email" placeholder="(Email Anda)" required>
+        <input class="input" type="email" name="your-email" id="email" placeholder="(Email Anda)" required>
     </p>
 
     <p> Saya Punya
@@ -17,7 +17,7 @@
     </p>
 
     <p>
-        <textarea name="your-message" id="your-message" placeholder="(Saran Anda)" class="expanding" required></textarea>
+        <textarea class="textarea" name="your-message" id="your-message" placeholder="(Saran Anda)" class="expanding" required></textarea>
     </p>
     <p>
         <button type="submit">
@@ -29,5 +29,5 @@
         </button>
     </p>
 </form>
-
-<small class='website'>Vist <a href='https://www.eshopindo.com/' target='_blank'>www.eshopindo.com</a>
+</div>
+</div>
