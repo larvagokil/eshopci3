@@ -74,6 +74,16 @@
             $this->load->view('templates/footer');
         }
 
-    }
+        public function contact() {
 
-?>
+            $data = [
+                'judul' => 'contactus',
+            ];
+
+            $this->load->view('templates/header',$data);
+            $this->load->view('templates/topbar',$data);
+            $this->load->view('contact',$data);
+            $this->load->view('templates/footer');
+        }
+
+    }
