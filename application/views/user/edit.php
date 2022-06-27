@@ -1,12 +1,12 @@
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container py-6 mb-5">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+    <h1 class="h3 py mt-4 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
         <div class="col-lg-6">
-        <?= $this->session->flashdata('message'); ?>
+            <?= $this->session->flashdata('message'); ?>
             <?= form_open_multipart('user/edit'); ?>
             <div class="row mb-3">
                 <label for="name" class="col-sm-2 col-form-label">Name</label>
