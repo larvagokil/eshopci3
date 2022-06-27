@@ -29,7 +29,7 @@ class User extends CI_Controller
             exit();
         }
         $data = [
-            'judul' => 'Beli barang',
+            'title' => 'Beli barang',
             'brg' => $cek->row_array(),
             'jml' => $jml
         ];
@@ -86,7 +86,7 @@ class User extends CI_Controller
             redirect('main');
         }
         $data = [
-            'judul' => 'Transaksi',
+            'title' => 'Transaksi',
             'trx' => $this->db->get_where('transaksi', ['nm_user' => $this->session->userdata('email')])->result_array(),
         ];
         $this->load->view('templates/header', $data);
