@@ -1,4 +1,4 @@
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css' href="path/style.css">
 
 <form id="contact-form">
     <p>Untuk Client,</p>
