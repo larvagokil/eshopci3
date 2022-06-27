@@ -1,5 +1,5 @@
 <!-- Begin Page Content -->
-<div class="container py-5 mb-5">
+<div class="container py-5" style="background-color:white">
 
     <!-- Page Heading -->
     <h1 class="h3 py mt-4 text-gray-800"><?= $title; ?></h1>
