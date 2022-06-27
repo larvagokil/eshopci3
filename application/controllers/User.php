@@ -15,9 +15,9 @@ class User extends CI_Controller
 
     public function beli()
     {
-        if (! $this->session->userdata('email')) {   
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');         
-            redirect('main'); 
+        if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');
+            redirect('main');
         }
 
         $id = $this->input->post('id');
@@ -26,24 +26,24 @@ class User extends CI_Controller
         if ($cek->num_rows() < 1) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Data Tidak Ditemukan</div>');
             redirect('main');
-                exit();
+            exit();
         }
         $data = [
             'judul' => 'Beli barang',
             'brg' => $cek->row_array(),
             'jml' => $jml
         ];
-        $this->load->view('templates/header',$data);
-        $this->load->view('templates/topbar',$data);
-        $this->load->view('beli',$data);
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('beli', $data);
         $this->load->view('templates/footer');
     }
 
     public function probeli()
     {
-        if (! $this->session->userdata('email')) {   
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');         
-            redirect('main'); 
+        if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');
+            redirect('main');
         }
 
         $waktu      = date('Y-m-d H:i:s');
@@ -66,33 +66,32 @@ class User extends CI_Controller
         ];
         $this->db->insert('transaksi', $data);
         // ubah stok di database
-        $ubah = $this->db->get_where('barang',['id_barang' => $idb])->row_array()['jml_barang'];
+        $ubah = $this->db->get_where('barang', ['id_barang' => $idb])->row_array()['jml_barang'];
         $ubah -= $this->input->post('jumlah');
-        $this->db->update('barang',['jml_barang' => $ubah],['id_barang' => $idb]);
+        $this->db->update('barang', ['jml_barang' => $ubah], ['id_barang' => $idb]);
         // lempar ke hal transaksi
         if ($this->db->affected_rows() < 1) {
             $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Transaksi Gagal</div>');
             redirect('main');
-        }else{
+        } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert"> Transaksi berhasil</div>');
             redirect('main/transaksi');
         }
-
     }
 
     public function transaksi()
-    {        
-        if (! $this->session->userdata('email')) {   
-            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');         
-            redirect('main'); 
+    {
+        if (!$this->session->userdata('email')) {
+            $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-message" role="alert">Mohon maaf, Anda harus login dulu sebelum membeli barang</div>');
+            redirect('main');
         }
         $data = [
             'judul' => 'Transaksi',
-            'trx' => $this->db->get_where('transaksi',['nm_user' => $this->session->userdata('email')])->result_array(),
+            'trx' => $this->db->get_where('transaksi', ['nm_user' => $this->session->userdata('email')])->result_array(),
         ];
-        $this->load->view('templates/header',$data);
-        $this->load->view('templates/topbar',$data);
-        $this->load->view('transaksi',$data);
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/transaksi', $data);
         $this->load->view('templates/footer');
     }
 
@@ -124,12 +123,12 @@ class User extends CI_Controller
             $name = $this->input->post('name');
             $email = $this->input->post('email');
             $imglama = $this->input->post('imglama');
-                
+
             //cek jika ada gambar yang akan diupload
             $upload_image = $_FILES['image']['name'];
             if ($upload_image) {
                 $new_image = $this->adminm->upload($_FILES['image']['name']);
-            }else {
+            } else {
                 $new_image = $imglama;
             }
 
@@ -142,12 +141,11 @@ class User extends CI_Controller
                 $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
                 Your Profile has been Updated</div>');
                 redirect('user/profile');
-            }else{
+            } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">
                 Profile anda gagal di update</div>');
                 redirect('user/edit');
             }
         }
     }
-
 }
