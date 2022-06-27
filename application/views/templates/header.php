@@ -20,7 +20,7 @@
     }
 
     .footer {
-      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("http://andreeabunget.co.uk/Img/footer.jpg");
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("<?= base_url('assets/img/bgweb2.jpg'); ?>");
       background-size: cover;
 
     }
