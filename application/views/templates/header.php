@@ -10,6 +10,10 @@
   <link rel="apple-touch-icon" href="<?= base_url('assets/img/profile/logoweb-bg.png'); ?>">
   <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/img/profile/logoweb-bg.png'); ?>">
 
+  <!-- css khususon -->
+  <?php if (isset($cssk)) { ?>
+  <link rel="stylesheet" href="<?= base_url('assets/css/'.$cssk) ?>">
+<?php } ?>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

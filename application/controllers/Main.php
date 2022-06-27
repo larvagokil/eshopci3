@@ -78,6 +78,7 @@
 
             $data = [
                 'judul' => 'contactus',
+                'cssk' => 'contact.css'
             ];
 
             $this->load->view('templates/header',$data);
