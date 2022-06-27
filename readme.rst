@@ -2,8 +2,8 @@
 Website E-Shopindo
 ###################
 
-Web Programming
-Kelompok 2:
+**Web Programming
+Kelompok 2:**
 
 1. 17190401 - Akhmad Nur Ghazi         **(Full Stack)**
 2. 17190749 - Muhammad Adhitya A.P     **(Full Stack)**
