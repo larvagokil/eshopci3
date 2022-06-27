@@ -1,8 +1,8 @@
 <!-- Begin Page Content -->
-<div class="container-fluid">
+<div class="container py-5" style="background-color:white">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
+    <h1 class="h3 py mt-4 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
         <div class="col-lg-5">
@@ -20,6 +20,7 @@
                     <h5 class="card-title"><?= $user['name']; ?></h5>
                     <p class="card-text"><?= $user['email']; ?></p>
                     <p class="card-text"><small class="text-muted">Member since <?= date('d F Y', $user['date_created']); ?></small></p>
+                    <a class="uppercase" href="<?= base_url('user/edit') ?>">Edit Profile</a>
                 </div>
             </div>
         </div>
