@@ -37,6 +37,26 @@
         </div>
     </div>
 </div>
+
+<!-- Feedback Modal-->
+<div class="modal fade" id="feedModal" tabindex="-1" role="dialog" aria-labelledby="feedModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Feedback User?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Yes" if you are ready to Googlesheet.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="https://docs.google.com/spreadsheets/u/4/d/1OJr80R33reAWSNlcfxvh18ai1flKrnV-n0e0exPtE20/edit#gid=0">Yes</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -65,7 +85,7 @@
             <div class="modal-header pt-0">
                 <h5 class="modal-title mx-auto" id="exampleModalLabel"><b> Detail Transaksi </b></h5>
             </div>
-            <div class="modal-body text-dark">                
+            <div class="modal-body text-dark">
                 <div class="row">
                     <div class="col"><b>Status</b></div>
                     <div class="col text-right" id="status">Dikirim</div>
@@ -77,7 +97,9 @@
                 <div class="row">
                     <div class="col">Tanggal Pembelian</div>
                     <div class="col text-right" id="waktu">12 juni 2021, 03:05 WIB</div>
-                    <div class="col-12"><hr></div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12"><b>Info Pengiriman</b></div>
@@ -95,7 +117,9 @@
                     <div class="col-8 ml-auto" id="notelp">628971760928</div>
                     <div class="col-4">Alamat</div>
                     <div class="col-8 ml-auto" id="alamat">jl. bantargebang setu no 51, rt 01/03, padurenan, mustika jaya Bekasi</div>
-                    <div class="col-12"><hr></div>
+                    <div class="col-12">
+                        <hr>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12"><b>Rincian Pembayaran</b></div>
@@ -173,7 +197,7 @@
             modal.find('#jeniskirim').text(button.data('jeniskirim'))
             modal.find('#jenisbayar').text(button.data('jenisbayar'))
             modal.find('#idb').text(button.data('idb'))
-            modal.find('#jml').text(button.data('jml')+' barang')
+            modal.find('#jml').text(button.data('jml') + ' barang')
             modal.find('#total').text(button.data('total'))
             modal.find('#waktu').text(button.data('waktu'))
             modal.find('#status').text(button.data('status'))
