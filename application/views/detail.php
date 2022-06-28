@@ -2,7 +2,7 @@
     
 ?>
 <div class="container border border-4 border-dark" style="margin-top:10px;padding:1rem;" >
-    <div class="row" style="height:auto">
+    <div class="row" style="background-color:white; height:auto">
         <div class="col-auto overflow-auto">
             <img src="<?= base_url('assets/img/barang/') . $brg['gbr_barang'] ?>" alt="gambar" width="500px" >       
         </div>  
