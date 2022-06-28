@@ -75,7 +75,7 @@ class User extends CI_Controller
             redirect('main');
         } else {
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert"> Transaksi berhasil</div>');
-            redirect('main/transaksi');
+            redirect('user/transaksi');
         }
     }
 
