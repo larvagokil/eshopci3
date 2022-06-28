@@ -30,6 +30,11 @@
                             Homepage
                         </a>
                         <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="https://docs.google.com/spreadsheets/u/4/d/1OJr80R33reAWSNlcfxvh18ai1flKrnV-n0e0exPtE20/edit#gid=0" data-toggle="modal" data-target="#feedModal">
+                            <i class="fas fa-comment-dots fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Feedback User
+                        </a>
+                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
