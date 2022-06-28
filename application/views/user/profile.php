@@ -1,8 +1,8 @@
 <!-- Begin Page Content -->
-<div class="container py-5" style="background-color:white">
+<div class="container py-3" style="background-color:white">
 
     <!-- Page Heading -->
-    <h1 class="h3 py mt-4 text-gray-800"><?= $title; ?></h1>
+    <h1 class="h3 py mt-2 text-gray-800"><?= $title; ?></h1>
 
     <div class="row">
         <div class="col-lg-5">
