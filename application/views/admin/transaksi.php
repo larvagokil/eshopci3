@@ -3,7 +3,8 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1>
-
+    <?= $this->session->flashdata('pesan'); ?>
+    <!-- bag atas -->
     <div class="row">
                 <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
@@ -80,52 +81,68 @@
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <table class="table">
+    </div>
+    <!-- akhir bag atas -->
+        <div class="card shadow mb-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable">
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">id barang</th>
-                            <th scope="col">id transaksi</th>
-                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">Trx id</th>
+                            <th scope="col">Nama Penerima</th>
                             <th scope="col">No Telp</th>
-                            <th scope="col">Alamat</th>
-                            <th scope="col">Jumlah barang</th>
                             <th scope="col">total harga</th>
-                            <th scope="col">Jenis Kirim</th>
-                            <th scope="col">Jenis Bayar</th>
                             <th scope="col">status</th>
-                            <th scope="col">waktu transaksi</th>
-
+                            <th scope="col" style="white-space: nowrap">waktu transaksi</th>
+                            <th scope="col">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach($trans as $trs) : ?>   
                         <tr>
-                            <th scope="row"><?= $i++; ?></th>
-                            <td><?= $trs['id_barang']; ?></td>
-                            <td><?= $trs['id_transaksi']; ?></td>
+                            <th scope="row"><?= $i++; ?></th>                        
+                            <td><a href="#" data-toggle="modal" data-target="#transModal"
+                                data-id="<?= $trs['id_transaksi'] ?>"
+                                data-nm="<?= $trs['nm_lengkap'] ?>"
+                                data-notelp="<?= $trs['no_telp'] ?>"
+                                data-alamat="<?= $trs['alamat'] ?>"
+                                data-jeniskirim="<?= $trs['jeniskirim'] ?>"
+                                data-jenisbayar="<?= $trs['jenisbayar'] ?>"
+                                data-idb="<?= $trs['id_barang'] ?>"
+                                data-jml="<?= $trs['jml_barang'] ?>"
+                                data-total="Rp.<?= number_format($trs['total_harga'],0,",","."); ?>"
+                                data-waktu="<?= $trs['waktu_transaksi'] ?>"
+                                data-status="<?= $trs['status'] ?>"
+                                >
+                                <?= $trs['id_transaksi']; ?>
+                            </a>
+                            </td>
                             <td><?= $trs['nm_lengkap']; ?></td>
                             <td><?= $trs['no_telp']; ?></td>
-                            <td><?= $trs['alamat']; ?></td>
-                            <td><?= $trs['jml_barang']; ?></td>
-                            <td><?= $trs['total_harga']; ?></td>
-                            <td><?= $trs['jeniskirim']; ?></td>
-                            <td><?= $trs['jenisbayar']; ?></td>
+                            <td>Rp.<?= number_format($trs['total_harga'],0,",","."); ?></td>
                             <td><?= $trs['status']; ?></td>
                             <td><?= $trs['waktu_transaksi']; ?></td>
+                            <td>
+                                <?php if ($trs['status'] == "Menunggu Konfirmasi") { ?>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/tolak' ?>" onclick="return confirm('Apakah anda yakin ingin menolak transaksi ini . ?');" class="btn btn-danger">Tolak</a>
+
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/proses' ?>" onclick="return confirm('Apakah anda ingin memproses transaksi ?');" class="btn btn-info">Proses</a>
+                                <?php
+                                } elseif ($trs['status'] == "Diproses") {
+                                ?>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/selesai' ?>" onclick="return confirm('Apakah anda ingin menyelesaikan transaksi ini ?, Pastikan Pelanggan telah menerima barang');" class="btn btn-success">Selesaikan</a>
+                                <?php } ?>
+                            </td>
                         </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
-</div>
-
-
 </div>
 <!-- /.container-fluid -->
 

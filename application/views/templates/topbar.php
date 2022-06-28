@@ -32,7 +32,7 @@
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
               <?php if ($this->session->userdata('role_id') == 2) { ?>
                 <a class="dropdown-item" href="<?= base_url('user/profile'); ?>">Profil</a>
-                <a class="dropdown-item" href="#">Transaksi</a>
+                <a class="dropdown-item" href="<?= base_url('user/transaksi'); ?>">Transaksi</a>
               <?php } else { ?>
                 <a class="dropdown-item" href="<?= base_url('admin') ?>">Halaman Admin</a>
               <?php } ?>
