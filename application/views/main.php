@@ -2,43 +2,43 @@
 <div class="container p-3">
   <!-- Content here -->
   <?= $this->session->flashdata('pesan'); ?>
-  
+
   <div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
 
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/1.png')?>" alt="Los Angeles">
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="max-width:100%" src="<?= base_url('assets/img/barang/1.png') ?>">
+      </div>
+      <div class="carousel-item">
+        <img style="max-width:100%" src="<?= base_url('assets/img/barang/2.png') ?>">
+      </div>
+      <div class="carousel-item">
+        <img style="max-width:100%" src="<?= base_url('assets/img/barang/3.png') ?>">
+      </div>
+      <div class="carousel-item">
+        <img style="max-width:100%" src="<?= base_url('assets/img/barang/4.png') ?>">
+      </div>
     </div>
-    <div class="carousel-item">
-      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/2.png')?>" alt="Chicago">
-    </div>
-    <div class="carousel-item">
-      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/3.png')?>" alt="Chicago">
-    </div>
-    <div class="carousel-item">
-      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/4.png')?>" alt="Chicago">
-    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+
   </div>
 
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
 
-</div>
-  
-  
 
   <hr>
   <div>
