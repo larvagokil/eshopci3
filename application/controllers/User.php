@@ -35,7 +35,7 @@ class User extends CI_Controller
         ];
         $this->load->view('templates/header', $data);
         $this->load->view('templates/topbar', $data);
-        $this->load->view('beli', $data);
+        $this->load->view('user/beli', $data);
         $this->load->view('templates/footer');
     }
 
