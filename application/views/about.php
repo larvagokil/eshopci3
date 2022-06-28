@@ -42,8 +42,8 @@
 
     <div class="row text-center">
       <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/ahmad.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+      <div  class="col-xl-3 col-sm-6 mb-5">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/ahmad.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">AKHMAD NUR GHAZI</h5><span class="small text-uppercase text-muted">Ketua Tim</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -57,7 +57,7 @@
 
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/adit.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/adit.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD ADHITYA A.P</h5><span class="small text-uppercase text-muted">Wakil ketua Tim</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -71,7 +71,7 @@
 
             <!-- Team item-->
             <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/rizki.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/rizki.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">RIZKI AJI ANGGORO </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -85,7 +85,7 @@
 
             <!-- Team item-->
             <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/syauqi.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/syauqi.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMAD SYAUQI TAQIYUDDIN F.K </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -96,10 +96,11 @@
         </div>
       </div>
       <!-- End-->
-
+</div>
+      <div class="row text-center">
       <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/ryan.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+      <div class="col-xl-3 col-sm-6 mb-5 ml-auto">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/ryan.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD RYAN PERDANA </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -112,8 +113,8 @@
       <!-- End-->
 
       <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/agus.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+      <div class="col-xl-3 col-sm-6 mb-5 mr-auto">
+        <div style="height:300px;" class="bg-white rounded shadow-sm py-5 px-4"><img src="<?= base_url('assets/img/profile/agus.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD AGUS DARMAWAN</h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>

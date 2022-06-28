@@ -2,15 +2,44 @@
 <div class="container p-3">
   <!-- Content here -->
   <?= $this->session->flashdata('pesan'); ?>
-  <div class="jumbotron">
-    <h2 class="display-4">Hello, world!</h2>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-    <hr class="my-4">
-    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+  
+  <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/1.png')?>" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/2.png')?>" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/3.png')?>" alt="Chicago">
+    </div>
+    <div class="carousel-item">
+      <img style="max-width:100%"  src="<?= base_url('assets/img/barang/4.png')?>" alt="Chicago">
+    </div>
   </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+  
+  
+
   <hr>
   <div>
     <?php foreach ($brg as $b) { ?>
