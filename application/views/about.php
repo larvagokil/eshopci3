@@ -43,12 +43,12 @@
     <div class="row text-center">
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"  ><img src="<?= base_url('assets/img/profile/ahmad.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/ahmad.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">AKHMAD NUR GHAZI</h5><span class="small text-uppercase text-muted">Ketua Tim</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=628971760928"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/akhmadnurghazi"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/larvagokil"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=628971760928"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/akhmadnurghazi"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/larvagokil"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -56,12 +56,12 @@
 
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;" ><img src="<?= base_url('assets/img/profile/adit.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/adit.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD ADHITYA A.P</h5><span class="small text-uppercase text-muted">Wakil ketua Tim</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=625893641053"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/adhitya.07"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/adhit007"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=625893641053"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/adhitya.07"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/adhit007"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -69,12 +69,12 @@
 
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;" ><img src="<?= base_url('assets/img/profile/rizki.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/rizki.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">RIZKI AJI ANGGORO </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6289638947818"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/rizkianggoroo"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/rizkianggorooo"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6289638947818"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/rizkianggoroo"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/rizkianggorooo"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -82,26 +82,26 @@
 
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;" ><img src="<?= base_url('assets/img/profile/syauqi.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/syauqi.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMAD SYAUQI TAQIYUDDIN F.K </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6285215745962"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/msyauquiii"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/MuhamadSyauqi"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6285215745962"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/msyauquiii"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/MuhamadSyauqi"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
       <!-- End-->
-</div>
-      <div class="row text-center">
+    </div>
+    <div class="row text-center">
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5 ml-auto">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;" ><img src="<?= base_url('assets/img/profile/ryan.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/ryan.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD RYAN PERDANA </h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6281386527793"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/rprdnaa"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6281386527793"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/rprdnaa"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -109,12 +109,12 @@
 
       <!-- Team item-->
       <div class="col-xl-3 col-sm-6 mb-5 mr-auto">
-        <div class="rounded shadow-sm py-5 px-4" style="height:300px;" ><img src="<?= base_url('assets/img/profile/agus.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+        <div class="rounded shadow-sm py-5 px-4" style="height:300px;"><img src="<?= base_url('assets/img/profile/agus.jpg'); ?>" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
           <h5 class="mb-0">MUHAMMAD AGUS DARMAWAN</h5><span class="small text-uppercase text-muted">Anggota</span>
           <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6282246321430"><i class="fab fa-whatsapp"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/ag100821"><i class="fab fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/Agus1008"><i class="fab fa-github"></i></a></li>
+            <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6282246321430"><i class="fab fa-whatsapp fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/ag100821"><i class="fab fa-instagram fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/Agus1008"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
