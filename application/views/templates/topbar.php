@@ -10,8 +10,8 @@
       <a class="navbar-brand" href="<?= base_url() ?>">
         <img height="85" width="auto" src="<?= base_url('assets/img/profile/logoweb-gif.gif'); ?>">
       </a>
-      <form method="post" action="<?= base_url('main/cari') ?>" class="form-inline my-2 my-lg-0 ml-auto">
-        <input class="form-control mr-sm-2" type="search" placeholder="Ketik di sini untuk mencari produk!" name="cari" aria-label="Search" size="70">
+      <form method="get" action="<?= base_url('main/cari') ?>" class="form-inline my-2 my-lg-0 ml-auto">
+        <input class="form-control mr-sm-2" type="search" placeholder="Ketik di sini untuk mencari produk!" name="kata" aria-label="Search" size="70">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
       </form>
       <ul class="navbar-nav pl-3 my-auto">

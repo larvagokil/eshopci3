@@ -5,10 +5,10 @@
               <div class="col-md-4 col-xs-12">
                   <div class="first">
                       <h4>Item</h4>
-                      <p> Laptop</p>
-                      <p> Smartphone</p>
-                      <p> Sd Card</p>
-                      <p> Printer</p>
+                      <p><a href="<?= base_url('main/cari?kata=')?>laptop" class="text-decoration-none text-light"> Laptop </a></p>
+                      <p><a href="<?= base_url('main/cari?kata=')?>smartphone" class="text-decoration-none text-light"> Smartphone</a></p>
+                      <p><a href="<?= base_url('main/cari?kata=')?>sd+card" class="text-decoration-none text-light"> Sd Card</a></p>
+                      <p><a href="<?= base_url('main/cari?kata=')?>printer" class="text-decoration-none text-light"> Printer</a></p>
                   </div>
               </div>
 

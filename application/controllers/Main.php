@@ -44,7 +44,7 @@ class Main extends CI_Controller
 
     public function cari()
     {
-        $kata = $this->input->post('cari');
+        $kata = $this->input->get('kata');
         $hasil = $this->barangm->cari($kata);
 
         if ($hasil->num_rows() < 1) {
