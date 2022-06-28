@@ -10,6 +10,7 @@
       <li data-target="#demo" data-slide-to="0" class="active"></li>
       <li data-target="#demo" data-slide-to="1"></li>
       <li data-target="#demo" data-slide-to="2"></li>
+      <li data-target="#demo" data-slide-to="3"></li>
     </ul>
 
     <!-- The slideshow -->
@@ -41,10 +42,10 @@
 
 
   <hr>
-  <div>
+  <div class="row justify-content-md-center">
     <?php foreach ($brg as $b) { ?>
 
-      <div class="card m-3 shadow" style="width: 11rem;float:left;">
+      <div class="card m-3 shadow" style="width: 11rem;">
         <img class="card-img-top img-thumbnail" src="<?= base_url('assets/img/barang/') . $b->gbr_barang ?>" alt="Card image cap">
         <div class="p-2">
 
@@ -52,12 +53,12 @@
           <strong>
             <p class="my-2">Rp. <?= number_format($b->hrg_barang, 2, ",", "."); ?></p>
           </strong>
-          <p class="my-1">Kota Bekasi</p>
+          <p class="my-1">Kota Bekasi</p>          
+          <span class="badge badge-dark">Stok <?=$b->jml_barang?></span>
           <a href="<?= base_url('produk/' . $b->id_barang) ?>" class="stretched-link" data-bs-toggle="tooltip" title="<?= $b->nm_barang ?>"></a>
         </div>
       </div>
     <?php } ?>
-    <div style="clear:left"></div>
   </div>
 
 </div>
