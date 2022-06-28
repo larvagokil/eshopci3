@@ -93,7 +93,6 @@
                             <th scope="col">Trx id</th>
                             <th scope="col">Nama Penerima</th>
                             <th scope="col">No Telp</th>
-                            <th scope="col">Alamat</th>
                             <th scope="col">total harga</th>
                             <th scope="col">status</th>
                             <th scope="col" style="white-space: nowrap">waktu transaksi</th>
@@ -104,11 +103,25 @@
                         <?php $i = 1; ?>
                         <?php foreach($trans as $trs) : ?>   
                         <tr>
-                            <th scope="row"><?= $i++; ?></th>
-                            <td><?= $trs['id_transaksi']; ?></td>
+                            <th scope="row"><?= $i++; ?></th>                        
+                            <td><a href="#" data-toggle="modal" data-target="#transModal"
+                                data-id="<?= $trs['id_transaksi'] ?>"
+                                data-nm="<?= $trs['nm_lengkap'] ?>"
+                                data-notelp="<?= $trs['no_telp'] ?>"
+                                data-alamat="<?= $trs['alamat'] ?>"
+                                data-jeniskirim="<?= $trs['jeniskirim'] ?>"
+                                data-jenisbayar="<?= $trs['jenisbayar'] ?>"
+                                data-idb="<?= $trs['id_barang'] ?>"
+                                data-jml="<?= $trs['jml_barang'] ?>"
+                                data-total="Rp.<?= number_format($trs['total_harga'],0,",","."); ?>"
+                                data-waktu="<?= $trs['waktu_transaksi'] ?>"
+                                data-status="<?= $trs['status'] ?>"
+                                >
+                                <?= $trs['id_transaksi']; ?>
+                            </a>
+                            </td>
                             <td><?= $trs['nm_lengkap']; ?></td>
                             <td><?= $trs['no_telp']; ?></td>
-                            <td><?= $trs['alamat']; ?></td>
                             <td>Rp.<?= number_format($trs['total_harga'],0,",","."); ?></td>
                             <td><?= $trs['status']; ?></td>
                             <td><?= $trs['waktu_transaksi']; ?></td>
