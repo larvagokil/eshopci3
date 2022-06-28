@@ -101,10 +101,19 @@
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
-                        <?php foreach($trans as $trs) : ?>   
+                        <?php foreach($trans as $trs) :
+                            $brg = $this->barangm->detail($trs['id_barang'])->row_array();
+                            ?>   
                         <tr>
                             <th scope="row"><?= $i++; ?></th>                        
-                            <td><a href="#" data-toggle="modal" data-target="#transModal"
+                            <td><?= $trs['id_transaksi']; ?></td>
+                            <td><?= $trs['nm_lengkap']; ?></td>
+                            <td><?= $trs['no_telp']; ?></td>
+                            <td>Rp.<?= number_format($trs['total_harga'],0,",","."); ?></td>
+                            <td><?= $trs['status']; ?></td>
+                            <td><?= $trs['waktu_transaksi']; ?></td>
+                            <td>
+                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#transModal"
                                 data-id="<?= $trs['id_transaksi'] ?>"
                                 data-nm="<?= $trs['nm_lengkap'] ?>"
                                 data-notelp="<?= $trs['no_telp'] ?>"
@@ -116,24 +125,15 @@
                                 data-total="Rp.<?= number_format($trs['total_harga'],0,",","."); ?>"
                                 data-waktu="<?= $trs['waktu_transaksi'] ?>"
                                 data-status="<?= $trs['status'] ?>"
-                                >
-                                <?= $trs['id_transaksi']; ?>
-                            </a>
-                            </td>
-                            <td><?= $trs['nm_lengkap']; ?></td>
-                            <td><?= $trs['no_telp']; ?></td>
-                            <td>Rp.<?= number_format($trs['total_harga'],0,",","."); ?></td>
-                            <td><?= $trs['status']; ?></td>
-                            <td><?= $trs['waktu_transaksi']; ?></td>
-                            <td>
+                                >Detail</a>
                                 <?php if ($trs['status'] == "Menunggu Konfirmasi") { ?>
-                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/tolak' ?>" onclick="return confirm('Apakah anda yakin ingin menolak transaksi ini . ?');" class="btn btn-danger">Tolak</a>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/tolak' ?>" onclick="return confirm('Apakah anda yakin ingin menolak transaksi ini . ?');" class="btn btn-sm btn-danger">Tolak</a>
 
-                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/proses' ?>" onclick="return confirm('Apakah anda ingin memproses transaksi ?');" class="btn btn-info">Proses</a>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/proses' ?>" onclick="return confirm('Apakah anda ingin memproses transaksi ?');" class="btn btn-sm btn-info">Proses</a>
                                 <?php
                                 } elseif ($trs['status'] == "Diproses") {
                                 ?>
-                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/selesai' ?>" onclick="return confirm('Apakah anda ingin menyelesaikan transaksi ini ?, Pastikan Pelanggan telah menerima barang');" class="btn btn-success">Selesaikan</a>
+                                <a href="<?= base_url('admin/protrans/') . $trs['id_transaksi'] . '/selesai' ?>" onclick="return confirm('Apakah anda ingin menyelesaikan transaksi ini ?, Pastikan Pelanggan telah menerima barang');" class="btn btn-sm btn-success">Selesaikan</a>
                                 <?php } ?>
                             </td>
                         </tr>
