@@ -90,15 +90,11 @@
                     <thead>
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">id barang</th>
-                            <th scope="col">id transaksi</th>
-                            <th scope="col">Nama Lengkap</th>
+                            <th scope="col">Trx id</th>
+                            <th scope="col">Nama Penerima</th>
                             <th scope="col">No Telp</th>
                             <th scope="col">Alamat</th>
-                            <th scope="col">Jumlah barang</th>
                             <th scope="col">total harga</th>
-                            <th scope="col">Jenis Kirim</th>
-                            <th scope="col">Jenis Bayar</th>
                             <th scope="col">status</th>
                             <th scope="col" style="white-space: nowrap">waktu transaksi</th>
                             <th scope="col">Aksi</th>
@@ -109,15 +105,11 @@
                         <?php foreach($trans as $trs) : ?>   
                         <tr>
                             <th scope="row"><?= $i++; ?></th>
-                            <td><?= $trs['id_barang']; ?></td>
                             <td><?= $trs['id_transaksi']; ?></td>
                             <td><?= $trs['nm_lengkap']; ?></td>
                             <td><?= $trs['no_telp']; ?></td>
                             <td><?= $trs['alamat']; ?></td>
-                            <td><?= $trs['jml_barang']; ?></td>
-                            <td><?= $trs['total_harga']; ?></td>
-                            <td><?= $trs['jeniskirim']; ?></td>
-                            <td><?= $trs['jenisbayar']; ?></td>
+                            <td>Rp.<?= number_format($trs['total_harga'],0,",","."); ?></td>
                             <td><?= $trs['status']; ?></td>
                             <td><?= $trs['waktu_transaksi']; ?></td>
                             <td>
