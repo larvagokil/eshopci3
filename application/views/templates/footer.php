@@ -84,6 +84,39 @@
           }
       }
   </script>
+
+  <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyCm85fT9YwT7uZRl_-lygRHiu83-VVXQbPgu1S4r4N8QyMMTfDjCy2PeBkPKl3Rok/exec'
+      const form = document.forms['contact-form']
+      const btnKirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const sendAlert = document.querySelector('.send-alert');
+
+      form.addEventListener('submit', e => {
+          e.preventDefault()
+          // ketika tombol submit diklik
+          // tampilkan tombol loading, hilangkan tombol kirim
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          fetch(scriptURL, {
+                  method: 'POST',
+                  body: new FormData(form)
+              })
+              .then(response => {
+                  // tampilkan tombol kirim, hilangkan tombol loading
+                  btnLoading.classList.toggle('d-none');
+                  btnKirim.classList.toggle('d-none');
+                  // tampilkan alert
+                  sendAlert.classList.toggle('d-none');
+                  //reset form setelah berhasil terkirim
+                  form.reset();
+                  console.log('Success!', response)
+              })
+              .catch(error => {
+                  console.error('Error!', error.message)
+              })
+      })
+  </script>
   </body>
 
   </html>
