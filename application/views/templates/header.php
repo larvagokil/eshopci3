@@ -217,6 +217,22 @@
       margin-top: 100px;
       margin-bottom: 100px;
     }
+
+    .fa-whatsapp {
+      color: green;
+    }
+
+    .fa-instagram {
+      color: palevioletred;
+    }
+
+    .fa-github {
+      color: black;
+    }
+
+    .fa-youtube {
+      color: crimson;
+    }
   </style>
 </head>
 <!-- ganti bg web disini -->
