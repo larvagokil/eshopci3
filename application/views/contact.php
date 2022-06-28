@@ -5,7 +5,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         <form name="contact-form" id="contact-form">
-            <p>Untuk Client,</p>
+            <p>Pesan dan Saran</p>
             <p>Nama
                 <label for="your-name">Saya</label> Adalah
                 <input class="input" type="text" name="name" id="your-name" minlength="3" placeholder="(Nama Anda)" required> Dan
