@@ -3,9 +3,9 @@
     $totalh = ($brg['hrg_barang'] * $jml) + $ongkir ;
 ?>
 <form action="<?= base_url('user/probeli')?>" method="post">
-<div class="container pt-3">
+<div class="container py-3">
     <div class="row g-2">        
-        <div class="col-md pe-5">
+        <div class="col-md pt-3 bg-light">
             <h3>Form Pemesanan</h3>
             <div class="mb-3">
                 <label for="namalengkap">Nama Lengkap Penerima</label>
