@@ -101,7 +101,7 @@
           <ul class="social mb-0 list-inline mt-3">
             <li class="list-inline-item"><a href="https://api.whatsapp.com/send?phone=6281386527793"><i class="fab fa-whatsapp fa-lg"></i></a></li>
             <li class="list-inline-item"><a href="https://www.instagram.com/rprdnaa"><i class="fab fa-instagram fa-lg"></i></a></li>
-            <li class="list-inline-item"><a href="https://github.com/"><i class="fab fa-github fa-lg"></i></a></li>
+            <li class="list-inline-item"><a href="https://github.com/RyanPerdana"><i class="fab fa-github fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
