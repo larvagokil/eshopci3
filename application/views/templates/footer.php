@@ -30,7 +30,7 @@
                       <h4> Contact</h4>
                       <ul>
                           <li><a href="<?= base_url('main/contact'); ?>">Contact Us</a></li>
-                          <li><i class="far fa-envelope"></i> admineshopindo@gmail.com</li>
+                          <li><i class="far fa-envelope"></i> eshopindo.k2@gmail.com</li>
                           <li><i class="fas fa-map-marker-alt"></i> Indonesia, ID </li>
                       </ul>
                   </div>
