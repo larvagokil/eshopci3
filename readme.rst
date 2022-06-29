@@ -12,22 +12,25 @@ Kelompok 2:**
 5. 17190383 - Muhammad Syauqi T.F.K  **(Front End)**
 6. 17190398 - Rizki Aji Anggoro      **(Front End)**
 
-# Web Toko Online | E-shopindo
 E - Shopindo adalah Web toko online sederhana yang dibuat untuk memenuhi tugas akhir Mata Kuliah "Web Programming II". 
 Website ini dibuat dengan menggunakan :
-  1. Framework CI 3
-	2. Bootstrap 4.6
-	3. Template SB Admin 2
-	4. Plugin CKeditor 4
-	5. Plugin DataTables
- 	6. Font Awesome
+
+1. Framework CI 3 - https://github.com/bcit-ci/CodeIgniter
+2. Bootstrap 4.6 - https://getbootstrap.com/docs/4.6/
+3. Template SB Admin 2 - https://startbootstrap.com/theme/sb-admin-2
+4. Plugin CKeditor 4 - https://ckeditor.com/ckeditor-4/
+5. Plugin DataTables - https://datatables.net/
+6. Font Awesome - https://fontawesome.com/
 	
 Website E-shopindo pada repo ini adalah versi CI 3 dari repository https://github.com/larvagokil/e-shopindo
+
+*******************
 # Konfigurasi
+*******************
 * Untuk menyesuaikan alamat dengan webserver anda ada di "application/config/config.php"
 * Untuk mengubah user, pass, database dan hostname untuk databasenya, berada di "application/config/database.php"
 * Untuk login dengan user biasa bisa langsung memakai form registrasi.
-* Untuk login admin, bisa menggunakan user = admin@admin.admin & Pass = ngadmin
+* Untuk login admin, bisa menggunakan email = admin@admin.admin & Pass = ngadmin
 
 * Untuk file database nya, ada di tokoci3.sql
 
