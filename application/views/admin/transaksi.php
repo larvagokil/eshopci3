@@ -102,7 +102,7 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach($trans as $trs) :
-                            $brg = $this->barangm->detail($trs['id_barang'])->row_array();
+                            $br = $this->barangm->detail($trs['id_barang'])->row_array();
                             ?>   
                         <tr>
                             <th scope="row"><?= $i++; ?></th>                        
@@ -120,7 +120,10 @@
                                 data-alamat="<?= $trs['alamat'] ?>"
                                 data-jeniskirim="<?= $trs['jeniskirim'] ?>"
                                 data-jenisbayar="<?= $trs['jenisbayar'] ?>"
-                                data-idb="<?= $trs['id_barang'] ?>"
+                                data-nmbar="<?= $br['nm_barang'] ?>"
+                                data-resi="<?= $trs['jeniskirim'].'-5430981' ?>"
+                                data-gbr="<?= base_url('assets/img/barang/'.$br['gbr_barang']) ?>"
+                                data-hrbar="Rp.<?= number_format($br['hrg_barang'],0,",","."); ?>"
                                 data-jml="<?= $trs['jml_barang'] ?>"
                                 data-total="Rp.<?= number_format($trs['total_harga'],0,",","."); ?>"
                                 data-waktu="<?= $trs['waktu_transaksi'] ?>"
@@ -148,3 +151,72 @@
 
 </div>
 <!-- End of Main Content -->
+<!-- Detail transaksi Modal -->
+<div class="modal fade" id="transModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <button class="close ml-auto pt-2 pr-2" type="button" data-dismiss="modal" aria-label="Close" class="ml-auto d-block">
+                <span aria-hidden="true">×</span>
+            </button>
+            <div class="modal-header pt-0">
+                <h5 class="modal-title mx-auto" id="exampleModalLabel"><b> Detail Transaksi </b></h5>
+            </div>
+            <div class="modal-body text-dark">
+                <div class="row">
+                    <div class="col-4"><b>Status</b></div>
+                    <div class="col-8 text-right" id="status">Dikirim</div>
+                    <div class="col-4">No transaksi</div>
+                    <div class="col-8 text-right" id="id">ESI-asdasdadasdasdsada</div>
+                    <div class="col-4">Tanggal Pembelian</div>
+                    <div class="col-8 text-right" id="waktu">12 juni 2021, 03:05 WIB</div>
+                    <div class="col-12"><hr></div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><b>Detail Barang</b></div>
+                    <div class="col-12">
+                        <div class="card p-2 mt-2">
+                        <div class="media">
+                            <img width="64px" src="<?= base_url('assets/img/1.jpg') ?>" class="mr-3" alt="..." id="gbr">
+                            <div class="media-body">
+                                <b id="nmbar">hp xioami mi ultra</b>
+                                <p id="hrbar">harga 10 rebu</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12"><hr></div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><b>Info Pengiriman</b></div>
+                    <div class="col-4">Kurir</div>
+                    <div class="col-8 ml-auto" id="jeniskirim">TIKI</div>
+                    <div class="col-4">No. resi</div>
+                    <div class="col-8 ml-auto" id="resi">123123112312</div>
+                </div>
+                <div class="row">
+                    <div class="col-4">Nama Penerima</div>
+                    <div class="col-8 ml-auto" id="nm">Nama penerima</div>
+                    <div class="col-4">No. telp</div>
+                    <div class="col-8 ml-auto" id="notelp">628971760928</div>
+                    <div class="col-4">Alamat</div>
+                    <div class="col-8 ml-auto" id="alamat">jl. bantargebang setu no 51, rt 01/03, padurenan, mustika jaya Bekasi</div>
+                    <div class="col-12"><hr></div>
+                </div>
+                <div class="row">
+                    <div class="col-12"><b>Rincian Pembayaran</b></div>
+                    <div class="col-6">Metode Pembayaran</div>
+                    <div class="col-6 text-right" id="jenisbayar">Indomaret</div>
+                    <div class="col-6">Total barang </div>
+                    <div class="col-6 text-right" id="jml">berapa barang</div>
+                    <div class="col-6">Total ongkir </div>
+                    <div class="col-6 text-right">Rp. 20.000</div>
+                    <div class="col-6"><b> Total Belanja</b></div>
+                    <div class="col-6 text-right" id="total">Rp. 100.000</b></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Keluar</button>
+            </div>
+        </div>
+    </div>
+</div>
